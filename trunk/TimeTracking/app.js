@@ -3,6 +3,7 @@ requires:[],
 launch: function()
 {
     
-    Ext.create('Ext.form.Panel');
+    Ext.create('Ext.form.Panel',{renderTo: Ext.getBody()});
+	
 }
   });
