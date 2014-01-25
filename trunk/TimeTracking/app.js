@@ -1,10 +1,13 @@
-Ext.aplication({name:'MyApp',
-requires:[],
+Ext.application({
+       name : 'MyApp',
+       requires: [
+             'Ext.window.MessageBox'
+       ],
 launch: function()
 {
     //Luiso mongo :3
     //JHajjajaja
-    Ext.create('Ext.form.Panel',{renderTo: Ext.getBody()});
-	
+  
+	Ext.Msg.alert('HOLA')
 }
   });
