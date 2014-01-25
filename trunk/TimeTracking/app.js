@@ -5,9 +5,6 @@ Ext.application({
        ],
 launch: function()
 {
-    //Luiso mongo :3
-    //JHajjajaja
-  
-	Ext.Msg.alert('HOLA')
+	Ext.Msg.alert('Chalin')
 }
   });
