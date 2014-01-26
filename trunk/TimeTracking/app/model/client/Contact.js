@@ -13,5 +13,5 @@ fields: [
 ],
 validation: [{type: 'presence',field: 'FirstName',message: 'Required First Name'},
              {type: 'presence',field: 'LastName',message: 'Required Last Name'},
-             {type: 'format', field: 'Email',matcher: /([a-z]+)(@)([a-z]+)(.)([a-z]+)/}  ]
+             {type: 'format', field: 'Email',matcher: /([a-z]+)(@)([a-z]+)(.)([a-z]+)/}]
 });

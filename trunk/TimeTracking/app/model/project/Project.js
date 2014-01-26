@@ -2,19 +2,9 @@ Ext.define('MyApp.model.project.Project', {
 extend: 'Ext.data.Model',
 idProperty: 'idproject',
 fields: [
-    { name: 'idproject', type: 'int' },
-    {name: 'projectName',type:'string'},
-    {name:'projectNotes',type:'string'} 
+    {name: 'idproject',type:'int'},
+    {name: 'Name',type:'string'},
+    {name:'Notes',type:'string'} 
 
-],
-    getNotes: function() 
-    {
-        return (Ext.String.ellipsis(this.get('projecNotes')));
-    },
-    
-    capitalizeName: function() 
-    {
-        this.set('projectName',
-        Ext.String.capitalize(this.get('projectName').toLowerCase()));
-    }
+],validation: [{type: 'presence',field: 'Name',message: 'Required Project Name'}]
 });
