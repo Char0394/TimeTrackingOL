@@ -2,9 +2,9 @@ Ext.define('MyApp.model.project.Project', {
 extend: 'Ext.data.Model',
 idProperty: 'idproject',
 fields: [
-{ name: 'idproject', type: 'int' },
-'projectName',
-'projectNotes' 
+    { name: 'idproject', type: 'int' },
+    {name: 'projectName',type:'string'},
+    {name:'projectNotes',type:'string'} 
 
 ],
     getNotes: function() 
