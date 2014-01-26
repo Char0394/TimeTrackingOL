@@ -12,14 +12,11 @@
 	  <!-- Ext 4 developers library -->
                   <script type="text/javascript"
                      src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-dev.js"></script>
-                  <!-- application javascript -->
-                  <script type="text/javascript"
-                          src="app.js"></script>
 				<script type="text/javascript"
                           src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-theme-gray.js"></script>
 		 <!-- Place this asynchronous JavaScript just before your </body> tag -->
 		  <script type="text/javascript"
-                          src="login.js"></script>
+                          src="Login.js"></script>
     
 	<body>
      <p>Esto es un login</p>
@@ -33,6 +30,11 @@
           data-scope="https://www.googleapis.com/auth/plus.login">
       </span>
     </span>
+	
+	<div onclick="logout()" id="desconectar">
+      <p>desconectar</p>
+    </div>
+	
 	</body>
 	
 

@@ -5,7 +5,7 @@ Ext.application({
        ],
 launch: function()
 {
-	//Ext.Msg.alert('Chalin')
+	Ext.Msg.alert('SOY UN PROFILE')
 	
 }
   });
