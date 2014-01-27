@@ -1,11 +1,14 @@
 Ext.application({
-       name : 'MyApp',
+       name : 'TimeTracking',
        requires: [
-             'Ext.window.MessageBox'
+             'Ext.window.MessageBox',
+             'TimeTracking.config.Constants',
+			 'TimeTracking.controller.Portal'
        ],
-launch: function()
+      controllers: ['Portal'],
+
+launch : function() 
 {
-	Ext.Msg.alert('SOY UN PROFILE')
-	
+	 Ext.create('TimeTracking.view.portal.Portal');
 }
-  });
+});	
