@@ -7,8 +7,16 @@
 		<title>new_file</title>
 		<meta name="author" content="Luis Munoz" />
 		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all.css" />
-			<!-- Date: 2013-12-07 -->
-	</head>
+		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all-neptune.css" />
+		<style>
+			.desconectar_btn{
+				float:right; /*esto lo pega del borde derecho*/
+				margin-right:50px !important; /*esto lo aleja un poco del borde derecho pa que no se vea tan mal */
+			}
+			.desconectar_btn p{
+				margin:0;				
+			}
+		</style>
 	  <!-- Ext 4 developers library -->
                   <script type="text/javascript"
                      src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-dev.js"></script>
@@ -17,6 +25,7 @@
 		 <!-- Place this asynchronous JavaScript just before your </body> tag -->
 		  <script type="text/javascript"
                           src="Login.js"></script>
+	
     
 	<body>
     <!--Boton de login, data de google -->
@@ -27,14 +36,14 @@
           data-cookiepolicy="single_host_origin"
           data-requestvisibleactions="http://schemas.google.com/AddActivity"
           data-scope="https://www.googleapis.com/auth/plus.login">
-      </span>
-    </span>
-	
-	<div onclick="logout()" id="desconectar">
+      </span> 
+	 </span> 
+	<div onclick="logout()" id="desconectar" class="desconectar_btn">
       <p>desconectar</p>
     </div>
 	<p id='dn'>Welcome to the site </b> </p>
 	</body>
+	
 	
 
 		

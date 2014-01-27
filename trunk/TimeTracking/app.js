@@ -9,6 +9,9 @@ Ext.application({
 
 launch : function() 
 {
-	 Ext.create('TimeTracking.view.portal.Portal');
+	//Instanciar Barra de tareas primera pantalla
+	// Ext.create('TimeTracking.view.portal.Portal');
+	Ext.create('TimeTracking.view.Container', 
+	{ renderTo: Ext.getBody()});
 }
 });	
