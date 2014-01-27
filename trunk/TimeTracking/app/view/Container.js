@@ -14,7 +14,6 @@ Ext.define("TimeTracking.view.Container", {
     items: 
 	[{
         title: 'Home',
-       
 		html: '<h1 class="x-panel-header">Welcome :D :D :D</h1>',
 		anchor: '-10, -262'
     }, 
