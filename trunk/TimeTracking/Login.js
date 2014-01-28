@@ -37,7 +37,7 @@
 //Logout
 function logout() 
 {
-     document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://127.0.0.1:8000/TimeTracking/index.html";
+     document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://127.0.0.1:8020/TimeTracking/TimeTracking/trunk/TimeTracking/index.html";
         
 }
 
