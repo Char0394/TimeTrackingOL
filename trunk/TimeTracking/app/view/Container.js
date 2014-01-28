@@ -16,6 +16,7 @@ Ext.define("TimeTracking.view.Container", {
         title: 'Home',
 		html: '<h1 class="x-panel-header">Welcome :D :D :D</h1>',
 		anchor: '-10, -262'
+		
     }, 
 	 {
 		title: 'Manage',
@@ -27,10 +28,14 @@ Ext.define("TimeTracking.view.Container", {
             html: ':D :D :D Here a project '
 			   },
 			   {
+		    xtype: 'button',
+		   enableToggle: true,
             title: 'Client',
             html: 'The first tab\'s content. Others may be added dynamically'
-			   }]
-        }
+			  }
+	      
+			   
+	  ]}
 	]
 	
 });

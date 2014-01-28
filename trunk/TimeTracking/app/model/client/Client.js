@@ -1,14 +1,4 @@
-Ext.define('MyApp.model.client.Client', {
+Ext.define('TimeTracking.model.client.Client', {
 extend: 'Ext.data.Model',
-idProperty: 'idclient',
-fields: [
-    { name: 'idproject', type: 'integer' },
-    { name: 'Name', type:'string'},
-    { name: 'clientAdress',type:'string'} 
-],
-validation: [{type: 'presence',field: 'Name',message: 'Required First Name'}],
-
-associations:[{ type: 'hasMany',
-                model: 'MyApp.model.client.Contact',
-                name: 'contacts'}]
+fields: ['id','name','adress']
 });

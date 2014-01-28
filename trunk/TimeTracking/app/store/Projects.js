@@ -1,13 +1,17 @@
-Ext.define("TimeTracking.store.Projects",{
-    extend:"Ext.data.Store",
-    model:"TimeTracking.model.project.Projects",
+Ext.define('TimeTracking.store.Projects',{
+    extend:'Ext.data.Store',
+    model:'TimeTracking.model.project.Project',
     autoLoad: true,
     proxy : {
                 type : 'ajax',
-                url : 'data/Clients.json',
+                api:
+                {
+                read : 'data/Projects.json'
+                },
                 reader : {
                             type : 'json',
-                            root : 'data'
+                            root : 'projects',
+                            successProperty: 'success'
                          }
-            }
+    }
 });

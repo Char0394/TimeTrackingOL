@@ -32,7 +32,7 @@ Ext.define('TimeTracking.view.project.Project', {
                 displayField: 'Client',
                 typeAhead: true,
                 queryMode: 'local',
-                emptyText: 'Select a client...',
+                emptyText: 'Select a client...'
                 
             },
             {
@@ -46,7 +46,7 @@ Ext.define('TimeTracking.view.project.Project', {
             	name: 'projectNotesTextArea',
             	fieldLabel: 'Project Notes',
             	value: 'Write notes in this field'
-        	},]
+        	}]
         }];
 
         this.callParent();

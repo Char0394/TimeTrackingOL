@@ -3,11 +3,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>new_file</title>
-		<meta name="author" content="Luis Munoz" />
-		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all.css" />
-		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all-neptune.css" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TimeTracking</title>
+		<link rel="stylesheet" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all.css"></link>
+		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/ext-theme-neptune/ext-theme-neptune-all.css" />
+		
+		
 		<style>
 			.desconectar_btn{
 				float:right; /*esto lo pega del borde derecho*/
@@ -17,24 +18,19 @@
 				margin:0;				
 			}
 		</style>
-	  <!-- Ext 4 developers library -->
-                  <script type="text/javascript"
-                     src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-dev.js"></script>
-				<script type="text/javascript"
-                          src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-theme-gray.js"></script>
+	<!-- Ext 4 developers library -->
+                <script src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-all-debug.js"></script>
 		 <!-- Place this asynchronous JavaScript just before your </body> tag -->
+		   <script src="bootstrap.js"></script>
+		  <script src="Login.js"></script>
+		   <script src="http://cdn.sencha.io/ext-4.2.0-gpl/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script>
+   		 <script type="text/javascript" src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-theme-neptune.js"></script>
 
-		  <script type="text/javascript"
-                          src="Login.js"></script>
-	
-
-		  <script type="text/javascript" src="Login.js"></script>
-		  <script src="bootstrap.js"></script>
-
-    
+  
+ 
 	<body>
     <!--Boton de login, data de google -->
-    <span id="signinButton" class="offset6">
+	 <span id="signinButton" class="offset6">
       <span class="g-signin"
           data-callback="signinCallback"
           data-clientid="499590825481-vf9famtmkf1cri8dsf8pf265ql8jh18u.apps.googleusercontent.com"
@@ -47,6 +43,7 @@
       <p>desconectar</p>
     </div>
 	<p id='dn'>Welcome to the site </b> </p>
+   
 	</body>
 	
 	

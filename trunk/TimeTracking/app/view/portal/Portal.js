@@ -9,7 +9,7 @@ Ext.define('TimeTracking.view.portal.Portal', {
 		title:'Portal Title',
 		tabLayout:[{
 			closable:true,
-			title:'Pork!'
+			title:'Home'
 		}]
 	},
 	initComponent: function(){
@@ -21,7 +21,7 @@ Ext.define('TimeTracking.view.portal.Portal', {
 				region:'north',
 				items:[{
 					xtype:'tbtext',
-					text:this.getTitle()
+					text:'home'
 				},
 				{
 					xtype:'tbfill'

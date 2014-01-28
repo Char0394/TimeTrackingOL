@@ -1,0 +1,10 @@
+{
+success: true,
+clients: [
+	{id:1,name:'1',adress:'ajit@wtc.com'},
+	{id:2,name:'2',adress:'sunil@wtc.com'},
+	{id:3,name:'3',adress:'alok@wtc.com'},
+	{id:4,name:'4',adress:'pradeep@wtc.com'},
+	{id:5,name:'5',adress:'sujit@wtc.com'}
+	]
+}
