@@ -7,15 +7,51 @@
 		<title>TimeTracking</title>
 		<link rel="stylesheet" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all.css"></link>
 		<link rel="stylesheet" type="text/css" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/ext-theme-neptune/ext-theme-neptune-all.css" />
-		
+		<!--<link rel="stylesheet" type="text/css" href="css/main.css" /> -->
 		
 		<style>
-			.desconectar_btn{
-				float:right; /*esto lo pega del borde derecho*/
-				margin-right:50px !important; /*esto lo aleja un poco del borde derecho pa que no se vea tan mal */
+			.header{
+				background-image: url(http://www.okkralabs.com/sites/all/themes/fusion/fusion_starter/images/bkg-header.jpg);
 			}
-			.desconectar_btn p{
-				margin:0;				
+			.logo{
+				width:150px; /*no necesitas height solo width*/
+				float:left;
+				
+			}
+			.logo img{
+				width:100%;
+			}
+			.btn{
+				float:right;
+				margin:10px 10px 0 0;
+			}
+			.title{
+				text-align: center;
+				color: white;
+				margin: 0;
+				width: 881px;
+				font-size: 17px;
+				float: left;
+				padding-top: 11px;
+			}
+			.logout{
+				margin-top:17px;
+				float:right;
+			}
+			/*t clase hace que los DIV contengan correctamente los elementos flotantes */
+			
+			.clearfix:before,
+			.clearfix:after {
+			    content: " ";
+			    display: table;
+			}
+			
+			.clearfix:after {
+			    clear: both;
+			}
+			
+			.clearfix {
+			    *zoom: 1;
 			}
 		</style>
 	<!-- Ext 4 developers library -->
@@ -30,21 +66,25 @@
  
 	<body>
     <!--Boton de login, data de google -->
-	 <span id="signinButton" class="offset6">
-      <span class="g-signin"
-          data-callback="signinCallback"
-          data-clientid="499590825481-vf9famtmkf1cri8dsf8pf265ql8jh18u.apps.googleusercontent.com"
-          data-cookiepolicy="single_host_origin"
-          data-requestvisibleactions="http://schemas.google.com/AddActivity"
-          data-scope="https://www.googleapis.com/auth/plus.login">
-      </span> 
-	 </span> 
-	<div onclick="logout()" id="desconectar" class="desconectar_btn">
-      <p>desconectar</p>
-    </div>
-	<p id='dn'>Welcome to the site </b> </p>
-
- 
+		<div class="header clearfix">
+			<div class="logo">
+		    	<img src="http://www.okkralabs.com/sites/all/themes/fusion/fusion_starter/logo.png" alt="OkkraLabs"> 
+		     </div>
+			<span id="signinButton" class="offset6 btn">
+		      <span class="g-signin"
+		          data-callback="signinCallback"
+		          data-clientid="499590825481-vf9famtmkf1cri8dsf8pf265ql8jh18u.apps.googleusercontent.com"
+		          data-cookiepolicy="single_host_origin"
+		          data-requestvisibleactions="http://schemas.google.com/AddActivity"
+		          data-scope="https://www.googleapis.com/auth/plus.login">
+		      </span> 
+			 </span> 
+			 <!--<div onclick="logout()" id="desconectar" class="desconectar_btn">
+		     	<p>desconectar</p>
+		     </div>-->
+			 <p id='dn' class="title">Welcome to the site </p><!--height="42" width="42"-->
+			 <input type="submit" value="Desconectar" id="desconectar" class="logout" onclick="logout()">
+		</div>
 	</body>
 	
 	

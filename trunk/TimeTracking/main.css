@@ -1,0 +1,27 @@
+/*  ========================================
+ 			Header And Start of Main.css 
+ 	======================================== */
+
+	.header{
+		width: 900px;
+		margin: 0 auto;
+		background-image: url(http://www.okkralabs.com/sites/all/themes/fusion/fusion_starter/images/bkg-header.jpg);
+	}
+	.logo{
+		width:300px; /*no necesitas height solo width*/
+	}
+	.logo img{
+		width:100%;
+	}
+		
+/*  ========================================
+ 			G+ Button Style 
+ 	======================================== */
+		
+	.desconectar_btn{
+		float:right; /*esto lo pega del borde derecho*/
+		margin-right:50px !important; /*esto lo aleja un poco del borde derecho pa que no se vea tan mal */
+	}
+	.desconectar_btn p{
+		margin:0;				
+	}
