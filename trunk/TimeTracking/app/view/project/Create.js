@@ -2,42 +2,42 @@ Ext.define('TimeTracking.view.project.Create', {
     extend: 'Ext.window.Window',
     alias : 'widget.projectCreate',
     requires: ['Ext.form.Panel','Ext.form.field.ComboBox','Ext.form.field.Text'],
+    store:Ext.create('TimeTracking.store.Projects',{autoLoad: true
+    }),
     title : 'Create Project',
     collapsible:false,
     layout: 'fit',
     autoShow: true,
     height: 400,
     width: 500,
+   
     initComponent: function() {
-        var stores = Ext.create('TimeTracking.store.Clients',{autoLoad:true});
+
        this.items= [{
                 xtype: 'form',
-                padding: '10 10 10 10',
+                padding: '5 5 5 5',
                 border: true,
                 items:[{             
                      xtype: 'combo',
                      name: 'clients',
+                     id:"cClients",
                      forceSelection: true,
-                     triggerAction: 'all',
                      emptyText:'Select a client...',
-                     //selectOnFocus:true,
-                     //allowBlank : true,
+                     allowBlank : false,
                      fieldLabel: 'Client',
-                     store: stores,
+                     store: Ext.create('TimeTracking.store.Clients'),
                      displayField: 'name',
-                     editable: false,
-                     valueField: 'id'
+                    // valueField: 'id',
+                     editable: false
                     },{
                      xtype: 'textfield',
                      name: 'name',
-                     //emptyText: 'Project Name',
-                    //afterLabelTextTpl: required,
-                     fieldLabel: 'Name'
+                     fieldLabel: 'Name',
+                     allowBlank : false,
+                     forceSelection: true,
                      },{
                      xtype: 'textareafield',
                      name: 'notes',
-                     //afterLabelTextTpl: required,
-                     //emptyText: 'Notes',
                      fieldLabel: 'Notes'
                     
                      }]}];

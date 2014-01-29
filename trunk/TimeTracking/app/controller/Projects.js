@@ -16,13 +16,19 @@ Ext.define('TimeTracking.controller.Projects', {
         },
         'projectEdit button[action=save]': {
             click: this.updateProject
+        }
+        ,'projectCreate button[action=save]': {
+            click: this.createProject
         },
         'projectEdit button[action=cancel]': {
             click: this.cancelEditProject
         },
+        'projectCreate button[action=cancel]': {
+            click: this.cancelEditProject
+        },
         'projectlist toolbar >button[itemId=createProject]':
         {
-            click: this.createProject
+            click: this.openCreateProject
         }
     });
     },
@@ -32,11 +38,30 @@ Ext.define('TimeTracking.controller.Projects', {
         var edit = Ext.create('TimeTracking.view.project.Edit').show();
         edit.down('form').loadRecord(record);
     },
-    createProject: function(grid, record) {
+    openCreateProject: function(button) {
         var edit = Ext.create('TimeTracking.view.project.Create').show();
     },
-
-
+   createProject: function(button) {
+        var win = button.up('window');
+        form = win.down('form');
+        record = form.getRecord();
+        values = form.getValues();
+       
+        if(values.name=='')
+        {
+            Ext.Msg.alert('Project Create','Insert project name');
+        }
+        else
+        {
+        var current = Ext.create('TimeTracking.model.project.Project');
+        current.set('name', values.name);
+        current.set('notes', values.notes);
+        this.getProjectList().getStore().insert(0,current);
+         //this.getProjectList().cellEditing.startEditByPosition({row:0,column:0});
+         win.close();
+        }
+       
+    },
     updateProject: function(button) {
         var win = button.up('window'),
         form = win.down('form'),

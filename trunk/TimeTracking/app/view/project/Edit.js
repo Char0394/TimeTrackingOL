@@ -2,7 +2,7 @@ Ext.define('TimeTracking.view.project.Edit', {
 	extend: 'Ext.window.Window',
 	alias : 'widget.projectEdit',
 	requires: ['Ext.form.Panel'],
-	title : 'Project Edit',
+	title : 'Edit Project',
 	collapsible:true,
 	layout: 'fit',
 	autoShow: true,
@@ -15,13 +15,18 @@ Ext.define('TimeTracking.view.project.Edit', {
 				padding: '5 5 5 5',
 				border: true,
 				items: [
+    				{
+                        xtype: 'textfield',
+                        name : 'client',
+                        fieldLabel: 'Client'
+                    },
 					{
 					xtype: 'textfield',
 					name : 'name',
 					fieldLabel: 'Name'
 					},
 					{
-					xtype: 'textfield',
+					xtype: 'textareafield',
 					name : 'notes',
 					fieldLabel: 'Notes'
 					}

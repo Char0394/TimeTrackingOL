@@ -6,7 +6,8 @@ Ext.define('TimeTracking.store.Clients',{
                 type : 'ajax',
                 api:
                 {
-                read : 'data/Clients.json'
+                    read : 'data/Clients.json',
+                    update:'data/updateClients.json'
                 },
                 reader : {
                             type : 'json',

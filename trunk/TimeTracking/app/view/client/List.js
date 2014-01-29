@@ -8,16 +8,10 @@ Ext.define('TimeTracking.view.client.List' ,{
     }),
     columns: [
         {
-            header: 'Name',
+            header: 'Clients',
             dataIndex: 'name',
             flex: 1
-        },
-        {
-            header: 'Adress', 
-            dataIndex: 'adress', 
-            flex: 2
         }
-  
     ],
     tools:[{
             type:'refresh',

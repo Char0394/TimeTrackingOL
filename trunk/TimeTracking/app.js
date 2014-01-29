@@ -1,17 +1,10 @@
-/*Ext.application({
-    name: 'TimeTracking',
-    appFolder:'app',
-    controllers: ['Projects','Clients'],
-    autoCreateViewport: true
-});*/
-
-
 Ext.application({
        name : 'TimeTracking',
        requires: [
              'Ext.window.MessageBox',
              'TimeTracking.config.Constants'
        ],
+	    controllers: ['Projects','Clients'],
 
 launch : function() 
 {

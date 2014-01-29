@@ -1,15 +1,14 @@
 Ext.define('TimeTracking.view.client.Create', {
     extend: 'Ext.window.Window',
-    alias : 'widget.projectCreate',
+    alias : 'widget.clientCreate',
     requires: ['Ext.form.Panel','Ext.form.field.ComboBox','Ext.form.field.Text'],
-    title : 'Create Project',
+    title : 'Create Client',
     collapsible:false,
     layout: 'fit',
     autoShow: true,
     height: 400,
     width: 500,
     initComponent: function() {
-        var stores = Ext.create('TimeTracking.store.Clients',{autoLoad:true});
        this.items= [{
                 xtype: 'form',
                 padding: '10 10 10 10',
@@ -18,7 +17,7 @@ Ext.define('TimeTracking.view.client.Create', {
                      xtype: 'textfield',
                      name: 'name',
                      //emptyText: 'Project Name',
-                     //afterLabelTextTpl: required,
+                    // afterLabelTextTpl: required,
                      fieldLabel: 'Name'
                      },{
                      xtype: 'textareafield',

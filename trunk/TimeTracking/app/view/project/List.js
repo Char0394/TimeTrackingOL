@@ -11,7 +11,19 @@ Ext.define('TimeTracking.view.project.List' ,{
             header: 'Projects',
             dataIndex: 'name',
             flex: 1
-        }
+        },
+        {
+                xtype: 'actioncolumn',
+                width: 30,
+                sortable: false,
+                menuDisabled: true,
+                items: [{
+                    icon: 'resources/images/save.png',
+                    tooltip: 'Delete Plant',
+                    scope: this,
+                    handler: this.onRemoveClick
+                }]
+            }
     ],
     tools:[{
             type:'refresh',
